@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao CSS</title>
+
+    <!-- Importação do CSS do Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- Importar jquery -->
+    <script src="js/jquery-3.6.1.min.js"></script>
+
+    <!-- Importar o JS do bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            
+            $("#btn-topo").click(function (e) { 
+                e.preventDefault();
+
+                $("#botoes").hide();
+                $("#links").hide();
+                $("#redes-sociais").hide();
+                
+                $("#topo").show();
+                $("#barra-topo").fadeIn();
+
+            });
+
+                  
+            $("#btn-aluno").click(function (e) {
+                e.preventDefault();
+
+                $("#topo").hide();
+                $("#barra-topo").hide();
+                $("#redes-sociais").hide();
+                $("#links").hide();
+                
+                $("#botoes").slideDown();
+
+            });
+                  
+            $("#btn-online").click(function (e) {
+                e.preventDefault();
+
+                $("#topo").hide();
+                $("#barra-topo").hide();
+                $("#botoes").hide();
+                
+                $("#links").fadeIn();
+                $("#redes-sociais").fadeIn();
+
+            });
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-2">
+            <h3>Menu Lateral</h3>
+
+            <button class="btn btn-success d-block mt-2" id="btn-topo">
+                Botão 1
+            </button>
+
+            <button class="btn btn-success d-block mt-2" id="btn-aluno">
+                Botão 2
+            </button>
+
+            <button class="btn btn-success d-block mt-2" id="btn-online">
+                Botão 3
+            </button>
+
+        </div>
+
+        <div class="col-lg">
+
+
+            <div id="topo" class="bg-light">
+                <a href="https://paranavai.ifpr.edu.br"> CASINHA </a> / <span>Área do Aluno</span>
+            </div>
+
+
+            <div id="barra-topo" class="bg-success pt-4 pb-2">
+                <ul>
+                    <li class="d-inline-block"><a class="text-light" href="https://paranavai.ifpr.edu.br/aluno/aluno-online/">Aluno Online</a></li>
+                    <li class="d-inline-block"><a class="text-light" href="https://paranavai.ifpr.edu.br/aluno/ano-letivo-2021/">Ano Letivo 2021</a></li>
+                    <li class="d-inline-block"><a class="text-light" href="https://paranavai.ifpr.edu.br/aluno/anos-letivos-anteriores/">Anos Letivos
+                            Anteriores</a></li>
+                    <li class="d-inline-block"><a class="text-light" href="https://paranavai.ifpr.edu.br/aluno/moodle/">Moodle IFPR</a></li>
+                    <li class="d-inline-block"><a class="text-light" href="https://paranavai.ifpr.edu.br/aluno/planos-de-trabalho-docente/">Planos de Trabalho
+                            Docente</a>
+                    </li>
+                    <li class="d-inline-block"><a class="text-light" href="https://paranavai.ifpr.edu.br/aluno/professores/">Professores</a></li>
+                </ul>
+            </div>
+
+
+            <div id="botoes">
+
+                <h1>Área do Aluno</h1>
+                <h4>Ano Letivo 2022</h4>
+
+                <div>
+
+                    <ul>
+                        <li>
+                            <a class="btn btn-light"
+                                href="https://paranavai.ifpr.edu.br/wp-content/uploads/2022/03/CALENDARIO_2022_final_aprovado.pdf">
+                                Calendário Acadêmico 2022
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="btn btn-light" href="https://ifprparanavai.edupage.org/timetable">
+                                Grade de Horários
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="btn btn-light" href="https://planif.ifpr.edu.br/index.planif">
+                                Horários de Atendimento
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="btn btn-light" href="https://paranavai.ifpr.edu.br/aluno/planos-de-trabalho-docente/">
+                                Planos de Trabalho
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="btn btn-light" href="https://paranavai.ifpr.edu.br/moodle/">
+                                Moodle IFPR
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="btn btn-light" href="https://certificados.paranavai.ifpr.edu.br/verificar.jsf">
+                                Certificados
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="btn btn-light" href="https://cronos.paranavai.ifpr.edu.br/">
+                                Cronos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="btn btn-light" href="https://paranavai.ifpr.edu.br/aluno-online/">
+                                Aluno Online
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="btn btn-light" href="https://paranavai.ifpr.edu.br/professores/">
+                                Professores
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="btn btn-light" href="https://paranavai.ifpr.edu.br/aluno/anos-letivos-anteriores/">
+                                Anos Letivos Anteriores
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="btn btn-light" href="https://planif.ifpr.edu.br/index.planif">
+                                Planos de Ensino
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div id="links">
+
+                    <p><strong>Aluno Online</strong></p>
+
+
+                    <a href="https://paranavai.ifpr.edu.br/wp-content/uploads/2022/03/Orientações-para-Estudantes-–-Ano-Letivo-2022-Anexo-1.pdf"
+                        target="_blank">Orientações para Estudantes – Ano Letivo 2022</a>
+
+                    <a href="https://paranavai.ifpr.edu.br/wp-content/uploads/2022/03/Ensalamento-Ano-Letivo-2022-Anexo-2.pdf"
+                        target="_blank">Ensalamento Ano Letivo 2022</a>
+
+                    <a href="https://goo.gl/forms/ffIePlXiIlfgy7tm2">Solicitação de Carteirinha</a>
+
+                    <a href="https://paranavai.ifpr.edu.br/wp-content/uploads/2015/12/IIP2.pdf">Instrução Normativa
+                        Atividades Complementares</a>
+
+                    <a href="https://drive.google.com/drive/folders/1FSF8cUUSSUBJIdX15mbb8ezaOvR0dC2L?usp=sharing"
+                        target="_blank">
+                        <strong>Planos de Ensino/Dependência – Cursos Superiores</strong></a>
+
+                    <a href="https://drive.google.com/drive/u/1/folders/1QxBV8s2gjNNAQuzzEzA3rJuA4Zti2ShV"
+                        target="_blank"><strong>Planos de Ensino/Dependência – Cursos Técnicos</strong></a>
+
+                    <a href="https://paranavai.ifpr.edu.br/wp-content/uploads/2016/11/MANUAL-DO-ALUNO-2016.pdf">Manual
+                        do
+                        Aluno</a>
+
+                    <a href="https://paranavai.ifpr.edu.br/vagas-de-estagio/">Vagas de Estágio</a>
+
+                    <a href="https://paranavai.ifpr.edu.br/wp-content/uploads/2017/04/REGULAMENTO-GERAL-DA-BIBLIOTECA-DO-CAMPUS-PARANAVAÍ.pdf"
+                        target="_blank">Regulamento da Biblioteca do Campus</a>
+
+                    <a
+                        href="https://paranavai.ifpr.edu.br/wp-content/uploads/2022/04/Regulamento-Disciplinar-Discente.pdf">Regulamento
+                        Disciplinar do Corpo Discente do IFPR – Campus Paranavaí</a>
+
+                </div>
+
+                <div id="redes-sociais">
+
+                    <h6>Compartilhe</h6>
+
+                    <a href="#" target="_blank">Twitter</a>
+                    <a href="#" target="_blank">Facebook</a>
+                    <a href="#" target="_blank">WhatsApp</a>
+                    <a href="#" target="_blank">LinkedIn</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</body>
+
+</html>
